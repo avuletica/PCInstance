@@ -1,0 +1,26 @@
+.icon-white {
+    color: #fefefe;
+}
+
+@media (min-width: 1205px) {
+    .brand-logo {
+        margin-left: 35px;
+    }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fefefe;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fefefe;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fefefe;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #fefefe;
+}
+
+#search {
+  height: 64px;
+}
