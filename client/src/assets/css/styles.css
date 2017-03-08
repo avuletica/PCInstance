@@ -1,0 +1,22 @@
+a {
+    outline: none !important;
+}
+
+.float-right {
+    float: right !important;
+}
+
+.btn-custom-color {
+    background-color: rgba(166, 11, 11, 0.48);    
+}
+
+.padding-right-zero {
+    padding-right: 0px !important;
+}
+
+.icon-small {
+    height: 17.6px;
+    width: 17.6px; 
+    margin-right: 10px;
+    vertical-align:middle
+}
