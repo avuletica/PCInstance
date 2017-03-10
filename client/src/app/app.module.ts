@@ -11,8 +11,10 @@ import { RegistrationComponent }  from './components/registration/registration.c
 import { LoginComponent }         from './components/login/login.component';
 import { CartComponent }          from './components/cart/cart.component';
 import { ProductsComponent }      from './components/products/products.component';
+import { SearchComponent }        from './components/search/search.component';
 
 import { AppRoutingModule }       from './app-routing.module';
+import { ProductSearchPipe }      from './pipes/ProductSearchPipe';
 
 @NgModule({
   imports: [
@@ -29,7 +31,9 @@ import { AppRoutingModule }       from './app-routing.module';
     RegistrationComponent,
     LoginComponent,
     CartComponent,
-    ProductsComponent
+    ProductsComponent,
+    SearchComponent,
+    ProductSearchPipe
   ],
   bootstrap: [ AppComponent ]
 })

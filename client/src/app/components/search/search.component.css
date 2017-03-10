@@ -1,0 +1,35 @@
+.card.small {
+    height: 250px;
+} 
+
+.card-content {
+    background-color: #ee6e73;
+    height: 100%;
+}
+
+.card-content p {
+    height: 100%;
+}
+
+.btn-small {
+    height: 24px;
+    line-height: 24px;
+    padding: 0 0.5rem;
+}
+
+.btn-custom {
+    background-color: rgba(166, 11, 11, 0.48);
+    width: 100%;
+}
+
+.left-align{
+  display: block;
+  float:left;
+  width: 50%;
+}
+
+.right-align{
+  display: block;
+  float:right;
+  width: 50%;
+}
