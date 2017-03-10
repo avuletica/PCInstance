@@ -1,1 +1,14 @@
-<div class="cart"> Hello CartComponent! </div>
+<div class="row">
+    <div class="col s12 m4" *ngFor="let product of products">
+        <div class="card small">
+            <div class="card-image">
+                <img src="../../../assets/images/products/titanz.png">
+            </div>
+            <div class="card-content">
+                <span from="product_title" class="white-text left-align">{{product.title}}</span>
+                <span from="product_price" class="white-text right-align">{{product.price}}</span>
+                <a class="waves-effect waves-light btn btn-custom" (click)="deleteFromCart(product._id)">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>

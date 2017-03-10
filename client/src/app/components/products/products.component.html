@@ -1,6 +1,6 @@
 <div class="product-list">
     <div class="row">
-        <div class="input-field col m2">
+        <div class="input-field col m4">
             <select materialize="material_select">
 				<option value="1">New</option>
 				<option value="2">Best selling</option>
@@ -17,7 +17,7 @@
                 <div class="card-content">
                     <span from="product_title" class="white-text left-align">{{product.title}}</span>
                     <span from="product_price" class="white-text right-align">{{product.price}}</span>
-                    <a class="waves-effect waves-light btn btn-custom">Add To Cart</a>
+                    <a class="waves-effect waves-light btn btn-custom" onclick="Materialize.toast('Product added to cart!', 4000)" (click)="addToCart(product.title, product.price)">Add To Cart</a>
                 </div>
             </div>
         </div>
