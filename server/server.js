@@ -3,6 +3,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 var products = require('./routes/products');
+var cart = require('./routes/cart');
 
 var port = 3000;
 
@@ -34,6 +35,7 @@ var allowCrossDomain = function(req, res, next) {
 
 app.use(allowCrossDomain);
 app.use('/api', products);
+app.use('/api', cart);
 
 app.listen(port, function () {
     console.log('Server started at http://localhost:3000');
