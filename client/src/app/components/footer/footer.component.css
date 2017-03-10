@@ -1,3 +1,7 @@
-.footer {
+footer.page-footer {
+    padding-top: 0;    
+}
 
+.container {
+    color: #fff;
 }

@@ -3,8 +3,9 @@
 }
 
 @media (min-width: 1205px) {
-    .brand-logo {
-        margin-left: 35px;
+    .nav-wrapper {
+        margin-left: 15%;
+        margin-right: 15%;
     }
 }
 
