@@ -1,15 +1,12 @@
 <div class="product-list">
     <div class="row">
-        <div class="input-field col m4">
-            <select materialize="material_select">
-				<option value="1">New</option>
-				<option value="2">Best selling</option>
-				<option value="3">Discount</option>
-			</select>
-            <label>Sort by:</label>
+        <div class="input-field col l2">
+            <select class="browser-default" [(ngModel)]="selectedProductFilter" (ngModelChange)="onChange($event)">
+                <option *ngFor="let product of productFilter" [ngValue]="product"> {{product.filter}} </option>
+            </select>
         </div>
         <div class="col m8" style="width: 100%"></div>
-        <div class="col s12 m4" *ngFor="let product of products">
+        <div class="col s12 m4" *ngFor="let product of (productService.productItems | productFilter:keyword)">
             <div class="card small">
                 <div class="card-image">
                     <img src="../../../assets/images/products/titanz.png">

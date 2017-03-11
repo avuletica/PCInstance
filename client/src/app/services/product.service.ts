@@ -18,7 +18,7 @@ export class ProductService {
             .subscribe(
             response => {
                 const serverItems: Array<any> = response.json();
-                this.productItems = serverItems.map(item => new Product(item._id, item.title, item.price));
+                this.productItems = serverItems.map(item => new Product(item._id, item.title, item.price, item.state));
             },
             error => console.log("Error when getting products")
             );

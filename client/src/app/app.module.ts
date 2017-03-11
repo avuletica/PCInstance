@@ -11,11 +11,12 @@ import { RegistrationComponent }    from './components/registration/registration
 import { LoginComponent }           from './components/login/login.component';
 import { CartComponent }            from './components/cart/cart.component';
 import { ProductsComponent }        from './components/products/products.component';
-import { ProductSliderComponent } from './components/product-slider/product-slider.component';
+import { ProductSliderComponent }   from './components/product-slider/product-slider.component';
 import { SearchComponent }          from './components/search/search.component';
 
 import { AppRoutingModule }         from './app-routing.module';
 import { ProductSearchPipe }        from './pipes/ProductSearchPipe';
+import { ProductFilterPipe }        from './pipes/ProductFilterPipe';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { ProductSearchPipe }        from './pipes/ProductSearchPipe';
     ProductsComponent,
     ProductSliderComponent,
     SearchComponent,
-    ProductSearchPipe
+    ProductSearchPipe,
+    ProductFilterPipe
   ],
   bootstrap: [ AppComponent ]
 })

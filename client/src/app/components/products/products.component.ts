@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../services/product.service';
-import { CartService } from '../../services/cart.service';
-import { Product } from '../../model/Product';
+import { Component, OnInit }    from '@angular/core';
+import { ProductService }       from '../../services/product.service';
+import { CartService }          from '../../services/cart.service';
+import { Product }              from '../../model/Product';
+
+declare var $: any;
 
 @Component({
     selector: 'products',
@@ -9,9 +11,19 @@ import { Product } from '../../model/Product';
     styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-    ngOnInit() { }
-
+    keyword: string;
     products: Product[];
+    productFilter = [{ 'filter': 'New' }, { 'filter': 'Best selling' }, { 'filter': 'Discount' }];
+    selectedProductFilter = this.productFilter[1];
+
+
+    ngOnInit() {
+        this.keyword = this.selectedProductFilter.filter;
+    }
+
+    onChange(product: any) {
+        this.keyword = product.filter;
+    }
 
     constructor(private productService: ProductService, private cartService: CartService) {
         this.productService.getProducts()
@@ -28,6 +40,5 @@ export class ProductsComponent implements OnInit {
         }
 
         this.cartService.addToCart(newProduct).subscribe();
-    }    
-
+    }
 }

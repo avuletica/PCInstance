@@ -9,9 +9,7 @@ import { Product } 					from '../../model/Product';
 	templateUrl: './search.component.html',
 	styleUrls: ['./search.component.css'],
 })
-export class SearchComponent implements OnInit {
-	ngOnInit() {}
-
+export class SearchComponent {
 	private keyword: string;
 	private ob: Object;
 	private products: Product[];
@@ -28,6 +26,5 @@ export class SearchComponent implements OnInit {
 				this.keyword = this.ob["0"].param
 			}
 		});
-	}	
-
+	}
 }
