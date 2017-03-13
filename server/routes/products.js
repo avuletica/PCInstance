@@ -3,7 +3,7 @@ var router = express.Router();
 var mongojs = require('mongojs');
 var db = mongojs('mongodb://test:test@ds141328.mlab.com:41328/pcinstance_db', ['products']);
 
-// Get All products
+// Get all products
 router.get('/products', function (req, res, next) {
     db.products.find(function (err, products) {
         if (err) {
@@ -13,7 +13,7 @@ router.get('/products', function (req, res, next) {
     });
 });
 
-// Get Single product
+// Get single product
 router.get('/product/:id', function (req, res, next) {
     db.products.findOne({
         _id: mongojs.ObjectId(req.params.id)
@@ -56,7 +56,7 @@ router.delete('/product/:id', function (req, res, next) {
     });
 });
 
-// Update Task
+// Update product
 router.put('/product/:id', function(req, res, next){
     var product = req.body;
     var updPoduct = {};
