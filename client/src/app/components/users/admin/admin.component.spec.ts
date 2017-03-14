@@ -1,22 +1,22 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { RegistrationComponent } from './registration.component';
+import { AdminComponent } from './admin.component';
 
-describe('a registration component', () => {
-	let component: RegistrationComponent;
+describe('a admin component', () => {
+	let component: AdminComponent;
 
 	// register all needed dependencies
 	beforeEach(() => {
 		TestBed.configureTestingModule({
 			providers: [
-				RegistrationComponent
+				AdminComponent
 			]
 		});
 	});
 
 	// instantiation through framework injection
-	beforeEach(inject([RegistrationComponent], (RegistrationComponent : any) => {
-		component = RegistrationComponent;
+	beforeEach(inject([AdminComponent], (AdminComponent : AdminComponent) => {
+		component = AdminComponent;
 	}));
 
 	it('should have an instance', () => {

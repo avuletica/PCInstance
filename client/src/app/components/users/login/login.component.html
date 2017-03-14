@@ -2,6 +2,7 @@
   <form class="col s12">
     <div class="col offset-s4">
       <div class="row">
+        <p>{{message}}</p>
         <div class="input-field col s12">
           <i class="material-icons prefix">account_circle</i>
           <input id="icon_prefix" type="text" class="validate">
@@ -16,10 +17,15 @@
         </div>
       </div>
       <div class="col s12 padding-right-zero">
-        <button class="btn btn-custom-color waves-effect waves-light float-right" type="submit" name="action">Login
+        <button class="btn btn-custom-color waves-effect waves-light float-right" type="submit" (click)="login()" *ngIf="!authService.isLoggedIn"
+          name="action">Login
           <i class="material-icons right">send</i>
-        </button>  
-      </div> 
+        </button>
+        <button class="btn btn-custom-color waves-effect waves-light float-right" type="submit" (click)="logout()" *ngIf="authService.isLoggedIn"
+          name="action">Logout
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
     </div>
   </form>
 </div>
