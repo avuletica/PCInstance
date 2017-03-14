@@ -69,6 +69,10 @@ router.put('/product/:id', function(req, res, next){
         updPoduct.price = product.price;
     }
     
+    if(product.state){
+        updPoduct.state = product.state;
+    }
+    
     if(!updPoduct){
         res.status(400);
         res.json({

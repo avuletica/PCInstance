@@ -3,8 +3,6 @@ import { ProductService }       from '../../services/product.service';
 import { CartService }          from '../../services/cart.service';
 import { Product }              from '../../model/Product';
 
-declare var $: any;
-
 @Component({
     selector: 'products',
     templateUrl: './products.component.html',
@@ -15,7 +13,6 @@ export class ProductsComponent implements OnInit {
     products: Product[];
     productFilter = [{ 'filter': 'New' }, { 'filter': 'Best selling' }, { 'filter': 'Discount' }];
     selectedProductFilter = this.productFilter[1];
-
 
     ngOnInit() {
         this.keyword = this.selectedProductFilter.filter;
@@ -41,4 +38,4 @@ export class ProductsComponent implements OnInit {
 
         this.cartService.addToCart(newProduct).subscribe();
     }
-}
+}   

@@ -11,7 +11,8 @@
                         <i class="material-icons">close</i>
                     </div>
                 </form>
-            </li>         
+            </li>
+            <li *ngIf="authService.isLoggedIn"><a routerLink="/admin"><i class="material-icons left">dashboard</i>Admin</a></li>
             <li><a routerLink="/cart"><i class="material-icons left">shopping_cart</i>Cart</a></li>
             <li><a routerLink="/registration"><i class="material-icons left">add</i>Signup</a></li>
             <li><a routerLink="/login"><i class="material-icons left">input</i>Login</a></li>
