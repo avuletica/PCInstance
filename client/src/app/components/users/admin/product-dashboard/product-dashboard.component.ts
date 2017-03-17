@@ -8,7 +8,7 @@ import { Product } from '../../../../model/Product';
 	styleUrls: ['./product-dashboard.component.css']
 })
 
-export class ProductDashboardComponent {
+export class ProductDashboardComponent implements OnInit {
 	products: Product[];
 	title: string;
 	price: string;
@@ -20,6 +20,11 @@ export class ProductDashboardComponent {
 	lastProductState: string;
 	productFilter = [{ 'filter': 'New' }, { 'filter': 'Best selling' }, { 'filter': 'Discount' }];
 	selectedProductFilter = this.productFilter[0];
+	selectedProductAddFilter = this.productFilter[0];
+
+	ngOnInit() {
+		 $('input#product_title, input#product_price').characterCounter();
+	}
 
 	constructor(private productService: ProductService) {
 		this.productService.getProducts()
@@ -63,7 +68,7 @@ export class ProductDashboardComponent {
 		var newProduct = {
 			title: this.title,
 			price: this.price,
-			state: this.state
+			state: this.selectedProductAddFilter.filter
 		}
 
 		this.productService.addProduct(newProduct)

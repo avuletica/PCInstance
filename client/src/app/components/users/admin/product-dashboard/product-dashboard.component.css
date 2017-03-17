@@ -31,5 +31,9 @@
 }
 
 .card.small .card-image+.card-content, .card.medium .card-image+.card-content, .card.large .card-image+.card-content {
-    max-height: 44%;
+    max-height: 46%;
+}
+
+.margin-top-bottom {
+    margin: 10px 0 10px 0;
 }
