@@ -15,6 +15,10 @@ export class NavigationComponent implements OnInit {
 		$(".button-collapse").sideNav();		
 	}
 
+	private searchValue: string;
+	private myQueryParams = [{}];
+	constructor(private authService: AuthService, private router: Router) { }
+
 	onAdminClick(){
 		$('.button-collapse').sideNav('show');
 	}
@@ -27,9 +31,9 @@ export class NavigationComponent implements OnInit {
 		$('.button-collapse').sideNav('hide');
 	}
 
-	private searchValue: string;
-	private myQueryParams = [{}];
-	constructor(private authService: AuthService, private router: Router) { }
+	logout() {
+		this.authService.logout();		
+	}
 
 	moveToSearch() {
 		if (!this.searchValue) {
