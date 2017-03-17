@@ -13,7 +13,7 @@ import { ProductsComponent }          from './components/products/products.compo
 import { ProductSliderComponent }     from './components/product-slider/product-slider.component';
 import { SearchComponent }            from './components/search/search.component';
 import { LoginComponent }             from './components/users/login/login.component';
-import { AdminComponent }             from './components/users/admin/admin.component';
+
 import { ProductDashboardComponent }  from './components/users/admin/product-dashboard/product-dashboard.component';
 import { UserDashboardComponent }     from './components/users/admin/user-dashboard/user-dashboard.component';
 
@@ -23,6 +23,8 @@ import { AdminRoutingModule }         from './components/users/admin-routing.mod
 import { ProductSearchPipe }          from './pipes/ProductSearchPipe';
 import { ProductFilterPipe }          from './pipes/ProductFilterPipe';
 
+ import { MaterializeModule } from 'angular2-materialize';
+
 
 @NgModule({
   imports: [
@@ -31,6 +33,7 @@ import { ProductFilterPipe }          from './pipes/ProductFilterPipe';
     HttpModule,
     AppRoutingModule,
     AdminRoutingModule,
+    MaterializeModule
   ],
   declarations: [
     AppComponent,
@@ -44,8 +47,7 @@ import { ProductFilterPipe }          from './pipes/ProductFilterPipe';
     ProductSliderComponent,
     SearchComponent,
     ProductSearchPipe,
-    ProductFilterPipe,
-    AdminComponent,
+    ProductFilterPipe,    
     ProductDashboardComponent,
     UserDashboardComponent
   ],

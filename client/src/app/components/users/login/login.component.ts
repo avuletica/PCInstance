@@ -21,12 +21,9 @@ export class LoginComponent {
 		this.message = 'Trying to log in ...';
 		this.authService.login().subscribe(() => {
 			this.setMessage();
-			if (this.authService.isLoggedIn) {
-				// Get the redirect URL from our auth service
-				// If no redirect has been set, use the default
-				let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/admin';
+			if (this.authService.isLoggedIn) {				
 				// Redirect the user
-				this.router.navigate([redirect]);
+				this.router.navigate(['/home']);
 			}
 		});
 	}

@@ -12,10 +12,28 @@
                     </div>
                 </form>
             </li>
-            <li *ngIf="authService.isLoggedIn"><a routerLink="/admin"><i class="material-icons left">dashboard</i>Admin</a></li>
+            <li *ngIf="authService.isLoggedIn"><a (click)="onAdminClick()"><i class="material-icons left">dashboard</i>Admin</a></li>
             <li><a routerLink="/cart"><i class="material-icons left">shopping_cart</i>Cart</a></li>
             <li><a routerLink="/registration"><i class="material-icons left">add</i>Signup</a></li>
             <li><a routerLink="/login"><i class="material-icons left">input</i>Login</a></li>
         </ul>
     </div>
 </nav>
+
+
+<ul id="slide-out" class="side-nav">
+    <li>
+        <div class="userView">
+            <div class="background">
+                <img src="../../../assets/images/users/office.jpg">
+            </div>
+            <a href="#!name"><span class="white-text name">John Doe</span></a>
+            <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div>
+    </li>
+    <li><a routerLink="/admin/products" (click)="onAdminEditProductClick()"><i class="material-icons">view_module</i>Edit products</a></li>
+    <li><a routerLink="/admin/users" (click)="onAdminEditUserClick()"><i class="material-icons">contacts</i>Edit users</a></li>
+    <li><a routerLink="/admin/support"><i class="material-icons">live_help</i>Live support</a></li>
+    <li><a routerLink="/admin/settings"><i class="material-icons">settings</i>Admin settings</a></li>
+</ul>
+<a href="#" style="display: none" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>

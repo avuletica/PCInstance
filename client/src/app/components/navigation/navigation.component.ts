@@ -10,7 +10,23 @@ import { AuthService } from '../../services/auth.service';
 	styleUrls: ['./navigation.component.css']
 })
 
-export class NavigationComponent {
+export class NavigationComponent implements OnInit {
+	ngOnInit() {
+		$(".button-collapse").sideNav();		
+	}
+
+	onAdminClick(){
+		$('.button-collapse').sideNav('show');
+	}
+
+	onAdminEditProductClick() {
+		$('.button-collapse').sideNav('hide');
+	}
+
+	onAdminEditUserClick() {
+		$('.button-collapse').sideNav('hide');
+	}
+
 	private searchValue: string;
 	private myQueryParams = [{}];
 	constructor(private authService: AuthService, private router: Router) { }
