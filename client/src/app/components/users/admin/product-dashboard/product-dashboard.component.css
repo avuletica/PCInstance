@@ -37,3 +37,11 @@
 .margin-top-bottom {
     margin: 10px 0 10px 0;
 }
+
+.btn-custom-color {
+    background-color: #CC3F41;
+}
+
+.margin-top {
+    margin-top: 10px
+}

@@ -1,7 +1,7 @@
 <div class="product-list">
     <div class="row">
         <div class="input-field col l2">
-            <select class="browser-default" [(ngModel)]="selectedProductFilter" (ngModelChange)="onChange($event)">
+            <select materialize="material_select" [(ngModel)]="selectedProductFilter" (ngModelChange)="onChange($event)">
                 <option *ngFor="let product of productFilter" [ngValue]="product"> {{product.filter}} </option>
             </select>
         </div>

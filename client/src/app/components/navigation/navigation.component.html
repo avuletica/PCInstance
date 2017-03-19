@@ -12,6 +12,7 @@
                     </div>
                 </form>
             </li>
+            <li><a routerLink="/home"><i class="material-icons left">home</i>Home</a></li>
             <li *ngIf="authService.isLoggedIn"><a (click)="onAdminClick()"><i class="material-icons left">dashboard</i>Admin</a></li>
             <li><a routerLink="/cart"><i class="material-icons left">shopping_cart</i>Cart</a></li>
             <li *ngIf="!authService.isLoggedIn"><a routerLink="/registration"><i class="material-icons left">add</i>Signup</a></li>

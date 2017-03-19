@@ -14,7 +14,8 @@ export class ProductDashboardComponent implements OnInit {
 	price: string;
 	state: string;
 	isEdit: boolean;
-	editProduct: number;
+	productFormVisibilty: boolean;
+	editProduct: number;	
 	lastProductTitle: string;
 	lastProductPrice: string;
 	lastProductState: string;
@@ -31,6 +32,10 @@ export class ProductDashboardComponent implements OnInit {
 			.subscribe(products => {
 				this.products = products;
 			});
+	}
+
+	toogleProductFormVisibility(visibilty : boolean) {
+		this.productFormVisibilty = visibilty;
 	}
 
 	onProductFilterChange(product: any) {

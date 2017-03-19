@@ -1,30 +1,28 @@
 <div class="product-list">
-    <div class="row">
+    <div *ngIf="!productFormVisibilty" class="row">
+        <div class="col s4">
+            <a class="waves-effect waves-light btn btn-custom-color" (click)="toogleProductFormVisibility(1)">New product</a>
+        </div>
+    </div>
+    <div *ngIf="productFormVisibilty" class="row">
         <form class="col s12" (ngSubmit)="addProduct()">
             <div class="row">
                 <div class="input-field col s3">
                     <input id="product_title" type="text" class="validate" data-length="10" [(ngModel)]="title" name="title" autocomplete="off">
-                    <label for="product_title">Product title</label>
+                    <label class="black-text" for="product_title">Product title</label>
                 </div>
-            </div>
-            <div class="row">
                 <div class="input-field col s3">
                     <input id="product_price" type="text" class="validate" data-length="6" [(ngModel)]="price" name="price" autocomplete="off">
-                    <label for="product_price">Product price</label>
+                    <label class="black-text" for="product_price">Product price</label>
                 </div>
-            </div>
-            <div class="row">
                 <div class="input-field col s3">
-                    <select class="browser-default" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedProductAddFilter">
+                    <select materialize="material_select" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedProductAddFilter">
                         <option *ngFor="let product of productFilter" [ngValue]="product"> {{product.filter}} </option>
                     </select>
                 </div>
-            </div>
-            <div class="row">
                 <div class="input-field col s3">
-                    <button class="btn waves-effect waves-light" type="submit">Submit
-                    <i class="material-icons right">send</i>
-                </button>
+                    <button class="btn waves-effect waves-light btn-custom-color margin-top" (click)="toogleProductFormVisibility(0)" type="submit">Submit</button>
+                    <button class="btn waves-effect waves-light btn-custom-color margin-top" (click)="toogleProductFormVisibility(0)" type="submit">Cancel</button>
                 </div>
             </div>
         </form>
@@ -40,8 +38,8 @@
                     <span *ngIf="!isEdit || i != editProduct" from="product_price" class="white-text right-align">{{product.price}}</span>
                     <div *ngIf="isEdit && i == editProduct">
                         <div class="input-field">
-                            <input type="text" id="product_title" [(ngModel)]="product.title" class="white-text left-align col s6">
-                            <input type="text" id="product_price" [(ngModel)]="product.price" class="white-text right-align col s6">
+                            <input type="text" id="product_title_2" [(ngModel)]="product.title" class="white-text left-align col s6">
+                            <input type="text" id="product_price_2" [(ngModel)]="product.price" class="white-text right-align col s6">
                             <select class="browser-default" [(ngModel)]="selectedProductFilter" (ngModelChange)="onProductFilterChange(product)">
                                 <option *ngFor="let product of productFilter" [ngValue]="product" id="product_state"> {{product.filter}} </option>
                             </select>
