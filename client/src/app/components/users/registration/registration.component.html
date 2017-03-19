@@ -1,60 +1,60 @@
-  <div class="row">    
-    <form class="col s10 offset-s2">
-      <div class="row">
-        <div class="input-field col s5">
-          <input autocomplete="off"id="username" type="text" class="validate">
-          <label for="username">Username</label>
-        </div>
-        <div class="input-field col s5">
-          <input autocomplete="off"id="first_name" type="text" class="validate">
-          <label for="first_name">First name</label>
-        </div>               
+<div class="row">
+  <form class="col s10 offset-s2" (ngSubmit)="addUser()">
+    <div class="row">
+      <div class="input-field col s5">
+        <input autocomplete="off" id="username" type="text" [(ngModel)]="username" name="title" class="validate">
+        <label for="username">Username</label>
       </div>
-      <div class="row">
-        <div class="input-field col s5">
-          <input autocomplete="off"id="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div> 
-        <div class="input-field col s5">
-          <input autocomplete="off"id="last_name" type="text" class="validate">
-          <label for="last_name">Last name</label>
-        </div>
-      </div> 
-      <div class="row">
-        <div class="input-field col s5">
-          <input autocomplete="off"id="email" type="email" class="validate">
-          <label for="email" data-error="Wrong email" data-success="Email valid">Email</label>
-        </div>
-        <div class="input-field col s5">
-          <input autocomplete="off"id="country" type="text" class="validate">
-          <label for="country">Country</label>
-        </div>
-      </div>  
-      <div class="row">
-        <div class="input-field col s5">
-          <input autocomplete="off"id="postal_code" type="text" class="validate">
-          <label for="postal_code">Postal code</label>
-        </div> 
-        <div class="input-field col s5">
-          <input autocomplete="off"id="city" type="text" class="validate">
-          <label for="city">City</label>
-        </div>
-      </div> 
-      <div class="row">
-        <div class="input-field col s5">
-          <input autocomplete="off"id="adress" type="text" class="validate">
-          <label for="adress">Address</label>
-        </div> 
-        <div class="input-field col s5">
-          <input autocomplete="off"id="credit_card_number" type="text" class="validate">
-          <label for="credit_card_number">Credit card number</label>
-        </div>
+      <div class="input-field col s5">
+        <input autocomplete="off" id="first_name" [(ngModel)]="firstName" name="firstName" type="text" class="validate">
+        <label for="first_name">First name</label>
       </div>
-      <div class="col s10 padding-right-zero">
-        <button class="btn btn-custom-color waves-effect waves-light float-right" type="submit" name="action">Submit
+    </div>
+    <div class="row">
+      <div class="input-field col s5">
+        <input autocomplete="off" id="password" type="password" [(ngModel)]="password" name="password" class="validate">
+        <label for="password">Password</label>
+      </div>
+      <div class="input-field col s5">
+        <input autocomplete="off" id="last_name" type="text" [(ngModel)]="lastName" name="lastName" class="validate">
+        <label for="last_name">Last name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s5">
+        <input autocomplete="off" id="email" type="email" [(ngModel)]="email" name="email" class="validate">
+        <label for="email" data-error="Wrong email" data-success="Email valid">Email</label>
+      </div>
+      <div class="input-field col s5">
+        <input autocomplete="off" id="country" type="text" [(ngModel)]="country" name="country" class="validate">
+        <label for="country">Country</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s5">
+        <input autocomplete="off" id="postal_code" type="text" [(ngModel)]="postalCode" name="postalCode" class="validate">
+        <label for="postal_code">Postal code</label>
+      </div>
+      <div class="input-field col s5">
+        <input autocomplete="off" id="city" type="text" [(ngModel)]="city" name="city" class="validate">
+        <label for="city">City</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s5">
+        <input autocomplete="off" id="adress" type="text" [(ngModel)]="address" name="address" class="validate">
+        <label for="adress">Address</label>
+      </div>
+      <div class="input-field col s5">
+        <input autocomplete="off" id="credit_card_number" type="text" [(ngModel)]="creditCardNumber" name="creditCardNumber" class="validate">
+        <label for="credit_card_number">Credit card number</label>
+      </div>
+    </div>
+    <div class="col s10 padding-right-zero">
+      <button class="btn btn-custom-color waves-effect waves-light float-right" type="submit" name="action">Submit
           <i class="material-icons right">send</i>
-        </button>  
-      </div> 
-              
-    </form>
-  </div>
+        </button>
+    </div>
+
+  </form>
+</div>

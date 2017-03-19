@@ -25,4 +25,24 @@ router.get('/user/:id', function (req, res, next) {
     });
 });
 
+//Save user
+router.post('/user', function (req, res, next) {
+    console.log("Trying to create user...");
+    var user = req.body;
+    if (!user.username && !user.password) {
+        res.status(400);
+        res.json({
+            "error": "Bad Data"
+        });
+    } else {
+        db.users.save(user, function (err, user) {
+            if (err) {
+                res.send(err);
+            }
+            console.log("User created!");
+            res.json(user);
+        });
+    }
+});
+
 module.exports = router;
