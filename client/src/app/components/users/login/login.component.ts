@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 
 import { AuthService } from '../../../services/auth.service';
 
+declare var Materialize: any;
+
 @Component({
 	selector: 'login',
 	templateUrl: 'login.component.html',
@@ -10,25 +12,22 @@ import { AuthService } from '../../../services/auth.service';
 })
 
 export class LoginComponent {
-	message: string;
-	constructor(public authService: AuthService, public router: Router) {
-		this.setMessage();
-	}
-	setMessage() {
-		this.message = 'Logged ' + (this.authService.isLoggedIn ? 'in' : 'out');
-	}
+	username: string;
+	password: string;
+	constructor(public authService: AuthService, public router: Router) { }
+
 	login() {
-		this.message = 'Trying to log in ...';
-		this.authService.login().subscribe(() => {
-			this.setMessage();
-			if (this.authService.isLoggedIn) {				
-				// Redirect the user
-				this.router.navigate(['/home']);
-			}
-		});
+		if (this.password && this.username) {
+			this.authService.login(this.username, this.password).subscribe(() => {
+				if (this.authService.isLoggedIn)
+					this.router.navigate(['/home']);
+				else
+					Materialize.toast("The username or password you have entered is invalid", 2000);
+			});
+		}
 	}
+
 	logout() {
 		this.authService.logout();
-		this.setMessage();
 	}
 }
