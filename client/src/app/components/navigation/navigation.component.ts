@@ -1,6 +1,6 @@
-import { Component, OnInit } 	from '@angular/core';
-import { ProductService } 		from '../../services/product.service';
-import { Router }				from '@angular/router'
+import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../../services/product.service';
+import { Router } from '@angular/router'
 
 import { AuthService } from '../../services/auth.service';
 
@@ -12,14 +12,14 @@ import { AuthService } from '../../services/auth.service';
 
 export class NavigationComponent implements OnInit {
 	ngOnInit() {
-		$(".button-collapse").sideNav();		
+		$(".button-collapse").sideNav();
 	}
 
 	private searchValue: string;
 	private myQueryParams = [{}];
 	constructor(private authService: AuthService, private router: Router) { }
 
-	onAdminClick(){
+	onAdminClick() {
 		$('.button-collapse').sideNav('show');
 	}
 
@@ -32,7 +32,7 @@ export class NavigationComponent implements OnInit {
 	}
 
 	logout() {
-		this.authService.logout();		
+		this.authService.logout();
 	}
 
 	moveToSearch() {

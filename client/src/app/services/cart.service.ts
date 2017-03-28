@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { Injectable }       from '@angular/core';
+import { Http, Headers }    from '@angular/http';
 
-import { Product } from '../model/Product';
+import { Product }          from '../model/Product';
 
 import 'rxjs/Rx';
 
 @Injectable()
-export class CartService {    
+export class CartService {
 
     constructor(private http: Http) { }
 
@@ -26,5 +26,5 @@ export class CartService {
         return this.http.delete('http://localhost:3000/api/cart/' + id)
             .map(res => res.json());
     }
-   
+
 }

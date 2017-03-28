@@ -7,4 +7,4 @@ var productsSchema = new Schema({
     state: String
 });
 
-mongoose.model('products',productsSchema);
+mongoose.model('products', productsSchema);

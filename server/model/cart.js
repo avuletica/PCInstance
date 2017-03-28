@@ -8,4 +8,4 @@ var cartSchema = new Schema({
     quantity: Number
 });
 
-mongoose.model('cart',cartSchema);
+mongoose.model('cart', cartSchema);

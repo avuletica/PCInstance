@@ -1,6 +1,6 @@
-import { Component }    from '@angular/core';
-import { CartService }  from '../../services/cart.service';
-import { Product }      from '../../model/Product';
+import { Component } from '@angular/core';
+import { CartService } from '../../services/cart.service';
+import { Product } from '../../model/Product';
 
 @Component({
     selector: 'app-cart',
@@ -24,6 +24,5 @@ export class CartComponent {
                 if (products[i]._id == id)
                     products.splice(i, 1);
         });
-    }  
-
+    }
 }

@@ -23,7 +23,7 @@ import { AdminRoutingModule }         from './components/users/admin-routing.mod
 import { ProductSearchPipe }          from './pipes/ProductSearchPipe';
 import { ProductFilterPipe }          from './pipes/ProductFilterPipe';
 
- import { MaterializeModule } from 'angular2-materialize';
+ import { MaterializeModule }         from 'angular2-materialize';
 
 
 @NgModule({

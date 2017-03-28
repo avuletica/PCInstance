@@ -1,9 +1,9 @@
-import { NgModule }             from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule }                   from '@angular/core';
+import { RouterModule, Routes }       from '@angular/router';
 
-import { AuthGuard }            from '../../services/auth-guard.service';
-import { AuthService }          from '../../services/auth.service';
-import { LoginComponent }       from './login/login.component';
+import { AuthGuard }                  from '../../services/auth-guard.service';
+import { AuthService }                from '../../services/auth.service';
+import { LoginComponent }             from './login/login.component';
 
 import { ProductDashboardComponent }  from './admin/product-dashboard/product-dashboard.component';
 import { UserDashboardComponent }     from './admin/user-dashboard/user-dashboard.component';

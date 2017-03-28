@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var usersSchema = new Schema({    
+var usersSchema = new Schema({
     username: String,
     password: String,
     email: String,
@@ -12,7 +12,7 @@ var usersSchema = new Schema({
     address: String,
     postalCode: Number,
     creditCardNumber: Number,
-    isAdmin: Boolean,  
+    isAdmin: Boolean,
 });
 
-mongoose.model('users',usersSchema);
+mongoose.model('users', usersSchema);

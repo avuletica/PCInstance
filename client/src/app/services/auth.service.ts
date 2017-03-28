@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router'
-import { Observable } from 'rxjs/Observable';
-import { Http, Headers } from '@angular/http';
+import { Injectable }         from '@angular/core';
+import { Router }             from '@angular/router'
+import { Observable }         from 'rxjs/Observable';
+import { Http, Headers }      from '@angular/http';
 
-import { User } from '../model/User';
+import { User }               from '../model/User';
 
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/do';

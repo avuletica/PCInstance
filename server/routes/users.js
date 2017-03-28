@@ -19,9 +19,9 @@ router.get('/users', function (req, res, next) {
 router.get('/user/:id', function (req, res, next) {
     console.log(req.params.id);
     db.model('users').findOne({ _id: req.params.id }, function (err, user) {
-        if (err) {
+        if (err)
             res.send(err);
-        }
+
         res.json(user);
     });
 });
@@ -37,20 +37,20 @@ router.post('/user', function (req, res, next) {
         });
     } else {
         db.model('users').create(user, function (err, user) {
-             if (err) {
+            if (err)
                 res.send(err);
-            }
+
             res.json(user);
-        });        
+        });
     }
 });
 
 // Delete product
 router.delete('/user/:id', function (req, res, next) {
     db.model('users').findOneAndRemove({ _id: req.params.id }, function (err, user) {
-        if (err) 
+        if (err)
             res.send(err);
-        
+
         res.json(user);
     });
 });
@@ -62,21 +62,20 @@ router.put('/user/:id', function (req, res, next) {
 
     // Modify later
     updUser.username = user.username;
-    updUser.password = user.password;     
+    updUser.password = user.password;
 
     if (!updUser) {
         res.status(400);
         res.json({
             "error": "Bad Data"
         });
-    } 
+    }
     db.model('users').findByIdAndUpdate(req.params.id, { $set: updUser }, { new: true }, function (err, user) {
         if (err)
             res.send(err);
 
         res.send(user);
     });
-    
 });
 
 module.exports = router;

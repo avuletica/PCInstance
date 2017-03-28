@@ -33,9 +33,9 @@ router.post('/cart', function (req, res, next) {
 // Delete product
 router.delete('/cart/:id', function (req, res, next) {
     db.model('cart').findOneAndRemove({ _id: req.params.id }, function (err, product) {
-        if (err) 
+        if (err)
             res.send(err);
-        
+
         res.json(product);
     });
 });

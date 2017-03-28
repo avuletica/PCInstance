@@ -19,9 +19,9 @@ router.get('/products', function (req, res, next) {
 router.get('/product/:id', function (req, res, next) {
     console.log(req.params.id);
     db.model('products').findOne({ _id: req.params.id }, function (err, product) {
-        if (err) {
+        if (err)
             res.send(err);
-        }
+
         res.json(product);
     });
 });
@@ -37,20 +37,20 @@ router.post('/product', function (req, res, next) {
         });
     } else {
         db.model('products').create(product, function (err, product) {
-             if (err) {
+            if (err)
                 res.send(err);
-            }
+
             res.json(product);
-        });        
+        });
     }
 });
 
 // Delete product
 router.delete('/product/:id', function (req, res, next) {
     db.model('products').findOneAndRemove({ _id: req.params.id }, function (err, product) {
-        if (err) 
+        if (err)
             res.send(err);
-        
+
         res.json(product);
     });
 });
@@ -63,18 +63,18 @@ router.put('/product/:id', function (req, res, next) {
     if (product.title != null)
         updPoduct.title = product.title;
 
-    if (product.price != null) 
+    if (product.price != null)
         updPoduct.price = product.price;
 
-    if (product.state != null) 
+    if (product.state != null)
         updPoduct.state = product.state;
-    
+
     if (!updPoduct) {
         res.status(400);
         res.json({
             "error": "Bad Data"
         });
-    } 
+    }
 
     db.model('products').findByIdAndUpdate(req.params.id, { $set: updPoduct }, { new: true }, function (err, product) {
         if (err)
@@ -82,7 +82,6 @@ router.put('/product/:id', function (req, res, next) {
 
         res.send(product);
     });
-    
 });
 
 module.exports = router;
