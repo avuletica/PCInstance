@@ -1,10 +1,6 @@
 <div class="product-list">
-    <div *ngIf="!productFormVisibilty" class="row">
-        <div class="col s4">
-            <a class="waves-effect waves-light btn btn-custom-color" (click)="toogleProductFormVisibility(1)">New product</a>
-        </div>
-    </div>
-    <div *ngIf="productFormVisibilty" class="row">
+   
+    <div  class="row">
         <form class="col s12" (ngSubmit)="addProduct()">
             <div class="row">
                 <div class="input-field col s3">
@@ -21,8 +17,8 @@
                     </select>
                 </div>
                 <div class="input-field col s3">
-                    <button class="btn waves-effect waves-light btn-custom-color margin-top" (click)="toogleProductFormVisibility(0)" type="submit">Submit</button>
-                    <button class="btn waves-effect waves-light btn-custom-color margin-top" (click)="toogleProductFormVisibility(0)" type="submit">Cancel</button>
+                    <button class="btn waves-effect waves-light btn-custom-color margin-top"  type="submit">Submit</button>
+                    <button class="btn waves-effect waves-light btn-custom-color margin-top"  type="submit">Cancel</button>
                 </div>
             </div>
         </form>

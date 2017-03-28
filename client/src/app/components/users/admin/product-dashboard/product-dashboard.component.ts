@@ -15,7 +15,7 @@ export class ProductDashboardComponent implements OnInit {
 	state: string;
 	isEdit: boolean;
 	productFormVisibilty: boolean;
-	editProduct: number;	
+	editProduct: number;
 	lastProductTitle: string;
 	lastProductPrice: string;
 	lastProductState: string;
@@ -24,7 +24,7 @@ export class ProductDashboardComponent implements OnInit {
 	selectedProductAddFilter = this.productFilter[0];
 
 	ngOnInit() {
-		 $('input#product_title, input#product_price').characterCounter();
+		$('input#product_title, input#product_price').characterCounter();
 	}
 
 	constructor(private productService: ProductService) {
@@ -34,7 +34,7 @@ export class ProductDashboardComponent implements OnInit {
 			});
 	}
 
-	toogleProductFormVisibility(visibilty : boolean) {
+	toogleProductFormVisibility(visibilty: boolean) {
 		this.productFormVisibilty = visibilty;
 	}
 
@@ -87,15 +87,10 @@ export class ProductDashboardComponent implements OnInit {
 
 	deleteProduct(id: any) {
 		var products = this.products;
-
 		this.productService.deleteProduct(id).subscribe(data => {
-			if (data.n == 1) {
-				for (var i = 0; i < products.length; i++) {
-					if (products[i]._id == id) {
-						products.splice(i, 1);
-					}
-				}
-			}
+			for (var i = 0; i < products.length; i++)
+				if (products[i]._id == id)
+					products.splice(i, 1);
 		});
 	}
 

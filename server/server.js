@@ -39,12 +39,8 @@ app.use(allowCrossDomain);
 app.use('/api', products);
 app.use('/api', cart);
 app.use('/api', users);
-app.get('/', function(req, res) {
+app.all('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
-});
-
-app.all('*', function(req, res) {
-  res.redirect("http://localhost:3000/home");
 });
 
 app.listen(port, function () {
