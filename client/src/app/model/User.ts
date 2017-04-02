@@ -10,10 +10,10 @@ export class User {
     address: string;
     postalCode: number;
     creditCardNumber: number;
-    isAdmin: boolean;
+    userRole: string;
 
     constructor(id: any, username: string, password: string, email: string, firstName: string, lastName: string,
-        country: string, city: string, address: string, postalCode: number, creditCardNumber: number, isAdmin: boolean) {
+        country: string, city: string, address: string, postalCode: number, creditCardNumber: number, userRole: string) {
         this._id = id;
         this.username = username;
         this.password = password;
@@ -25,6 +25,6 @@ export class User {
         this.address = address;
         this.postalCode = postalCode;
         this.creditCardNumber = creditCardNumber;
-        this.isAdmin = isAdmin;
+        this.userRole = userRole;
     }
 }

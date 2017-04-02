@@ -1,7 +1,6 @@
 <div class="product-list">
-   
-    <div  class="row">
-        <form class="col s12" (ngSubmit)="addProduct()">
+    <div class="row">
+        <form class="col s12" #addNewProduct="ngForm" (ngSubmit)="addProduct(); addNewProduct.reset()">
             <div class="row">
                 <div class="input-field col s3">
                     <input id="product_title" type="text" class="validate" data-length="10" [(ngModel)]="title" name="title" autocomplete="off">
@@ -17,8 +16,7 @@
                     </select>
                 </div>
                 <div class="input-field col s3">
-                    <button class="btn waves-effect waves-light btn-custom-color margin-top"  type="submit">Submit</button>
-                    <button class="btn waves-effect waves-light btn-custom-color margin-top"  type="submit">Cancel</button>
+                    <button class="btn waves-effect waves-light btn-custom-color margin-top" type="submit">Submit</button>
                 </div>
             </div>
         </form>

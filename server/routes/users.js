@@ -45,7 +45,7 @@ router.post('/user', function (req, res, next) {
     }
 });
 
-// Delete product
+// Delete user
 router.delete('/user/:id', function (req, res, next) {
     db.model('users').findOneAndRemove({ _id: req.params.id }, function (err, user) {
         if (err)
@@ -55,14 +55,9 @@ router.delete('/user/:id', function (req, res, next) {
     });
 });
 
-// Update product
+// Update user
 router.put('/user/:id', function (req, res, next) {
-    var user = req.body;
-    var updUser = {};
-
-    // Modify later
-    updUser.username = user.username;
-    updUser.password = user.password;
+    var updUser = req.body;
 
     if (!updUser) {
         res.status(400);

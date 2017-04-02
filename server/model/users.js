@@ -12,7 +12,7 @@ var usersSchema = new Schema({
     address: String,
     postalCode: Number,
     creditCardNumber: Number,
-    isAdmin: Boolean,
+    userRole: String,
 });
 
 mongoose.model('users', usersSchema);

@@ -77,12 +77,7 @@ export class ProductDashboardComponent implements OnInit {
 		}
 
 		this.productService.addProduct(newProduct)
-			.subscribe(product => {
-				this.products.push(product);
-				this.title = '';
-				this.price = '';
-				this.state = '';
-			});
+			.subscribe(product => this.products.push(product));
 	}
 
 	deleteProduct(id: any) {

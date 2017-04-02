@@ -1,3 +1,17 @@
-.user-dashboard {
+.clicable {
+    cursor: pointer;
+}
 
+th {
+    background-color: rgba(166, 11, 11, 0.48);
+    color: white;
+    border-radius: 0;
+}
+
+.margin-top-25 {
+    margin-top: 25px;
+}
+
+.margin-custom-submit {
+    margin: 25px 10px 0 10px;
 }
