@@ -24,7 +24,7 @@ export class RegistrationComponent {
     address: string;
     postalCode: number;
     creditCardNumber: number;
-    isAdmin: boolean;
+    userRole: string;
 
 	constructor(private authService: AuthService, public router: Router) {}
 
@@ -41,7 +41,7 @@ export class RegistrationComponent {
 			address: this.address,
 			postalCode: this.postalCode,
 			creditCardNumber: this.creditCardNumber,
-			isAdmin: false
+			userRole: this.userRole
 		}
 		console.log(newUser);
 

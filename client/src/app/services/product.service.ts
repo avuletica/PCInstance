@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { Injectable }       from '@angular/core';
+import { Http, Headers }    from '@angular/http';
 
-import { Product } from '../model/Product';
+import { Product }          from '../model/Product';
 
 import 'rxjs/Rx';
 
