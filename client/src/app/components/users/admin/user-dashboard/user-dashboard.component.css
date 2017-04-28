@@ -13,5 +13,5 @@ th {
 }
 
 .margin-custom-submit {
-    margin: 25px 10px 0 10px;
+    margin: 25px 10px 0 10px !important;
 }
