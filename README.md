@@ -1,6 +1,16 @@
-# PCInstance
+# Introduction
+PCInstance is responsive web shop application based on MEAN 2 stack with offline-storage. This project is made to serve as example how to manage client and server as separate applications, usage of web API and local nosql database, given that following features are implemented in this project:
 
-PCInstance is responsive web shop application based on MEAN 2 stack with online-storage.
+- User registration & login
+- Login validation
+- Ability to search and filter products
+- Users can add products to cart and remove them
+- Admin panel
+    - Route guarding (only accessible as admin user)
+    - Create / Read / Update / Delete users and products
+
+
+<img src="https://github.com/avuletica/PCInstance/blob/master/client/src/assets/images/home-sample.png" width="720" height="400">
 
 ### Tech
 
@@ -15,6 +25,7 @@ PCInstance uses a number of open source projects to work properly:
 * [mongoosejs](http://mongoosejs.com) - elegant mongodb object modeling for node.js
 
 And of course PCInstance itself is open source with a [MIT license](https://github.com/avuletica/PCInstance/blob/master/LICENSE)
+
 
 ### Installation
 
